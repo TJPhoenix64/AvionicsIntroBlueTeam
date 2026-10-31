@@ -141,7 +141,7 @@ int main(void)
     /* -- Sample board code for User push-button in interrupt mode ---- */
     if (BspButtonState == BUTTON_PRESSED)
     {
-
+      // PROPER COMMAND FOR FLASHING: make -j all && make flash 
       HAL_GPIO_WritePin(BaroNSS_GPIO_Port, BaroNSS_Pin, GPIO_PIN_RESET);
         if (HAL_GPIO_ReadPin(BaroNSS_GPIO_Port, BaroNSS_Pin) == GPIO_PIN_RESET)
           blink(2, 500, 200);     // CS really went low
